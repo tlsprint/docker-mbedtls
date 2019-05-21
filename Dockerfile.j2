@@ -12,24 +12,18 @@ FROM buildpack-deps AS builder
 WORKDIR /{{ implementation }}
 RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
 
-{%- if version == "0.12.0" %}
-
-# The test fail to build on this version, but the program and libraries build
-# just fine. To work around this issue, remove the lines from the Makefile that
-# specify the tests.
-RUN sed -i "/cd tests/d" Makefile
-{%- endif %}
-
-{%- if version == "0.13.0" %}
-
-# The author of this package has hard coded his home directory in the Makefile,
-# so CMake has to be installed and executed again.
+# Install build depencency cmake
 RUN apt-get update && apt-get install -y cmake
-RUN cmake . && make
-{%- endif %}
 
 # Build
+RUN cmake -D CMAKE_BUILD_TYPE:String="Release" .
 RUN make
 
 # Install to a temporary directory
 RUN make install DESTDIR=/tmp/package-dir
+
+# Install package to a new container, so we can be sure that we are running
+# this specific package.
+FROM debian
+COPY --from=builder /tmp/package-dir /
+RUN ldconfig

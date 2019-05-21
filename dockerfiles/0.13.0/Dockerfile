@@ -7,13 +7,18 @@ FROM buildpack-deps AS builder
 WORKDIR /mbedtls
 RUN git clone --branch polarssl-0.13.0 --depth 1 https://github.com/ARMmbed/mbedtls.git .
 
-# The author of this package has hard coded his home directory in the Makefile,
-# so CMake has to be installed and executed again.
+# Install build depencency cmake
 RUN apt-get update && apt-get install -y cmake
-RUN cmake . && make
 
 # Build
+RUN cmake -D CMAKE_BUILD_TYPE:String="Release" .
 RUN make
 
 # Install to a temporary directory
 RUN make install DESTDIR=/tmp/package-dir
+
+# Install package to a new container, so we can be sure that we are running
+# this specific package.
+FROM debian
+COPY --from=builder /tmp/package-dir /
+RUN ldconfig

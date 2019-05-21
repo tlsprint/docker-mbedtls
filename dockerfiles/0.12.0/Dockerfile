@@ -7,13 +7,18 @@ FROM buildpack-deps AS builder
 WORKDIR /mbedtls
 RUN git clone --branch polarssl-0.12.0 --depth 1 https://github.com/ARMmbed/mbedtls.git .
 
-# The test fail to build on this version, but the program and libraries build
-# just fine. To work around this issue, remove the lines from the Makefile that
-# specify the tests.
-RUN sed -i "/cd tests/d" Makefile
+# Install build depencency cmake
+RUN apt-get update && apt-get install -y cmake
 
 # Build
+RUN cmake -D CMAKE_BUILD_TYPE:String="Release" .
 RUN make
 
 # Install to a temporary directory
 RUN make install DESTDIR=/tmp/package-dir
+
+# Install package to a new container, so we can be sure that we are running
+# this specific package.
+FROM debian
+COPY --from=builder /tmp/package-dir /
+RUN ldconfig
