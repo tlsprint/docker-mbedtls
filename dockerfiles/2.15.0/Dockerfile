@@ -6,3 +6,6 @@ FROM buildpack-deps AS builder
 # containing only the code of the specified version/tag.
 WORKDIR /mbedtls
 RUN git clone --branch mbedtls-2.15.0 --depth 1 https://github.com/ARMmbed/mbedtls.git .
+
+# Build
+RUN make
