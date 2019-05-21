@@ -20,5 +20,13 @@ RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
 RUN sed -i "/cd tests/d" Makefile
 {%- endif %}
 
+{%- if version == "0.13.0" %}
+
+# The author of this package has hard coded his home directory in the Makefile,
+# so CMake has to be installed and executed again.
+RUN apt-get update && apt-get install -y cmake
+RUN cmake . && make
+{%- endif %}
+
 # Build
 RUN make
