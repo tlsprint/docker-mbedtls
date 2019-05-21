@@ -14,3 +14,6 @@ RUN cmake . && make
 
 # Build
 RUN make
+
+# Install to a temporary directory
+RUN make install DESTDIR=/tmp/package-dir

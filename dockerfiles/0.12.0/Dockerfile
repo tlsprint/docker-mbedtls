@@ -14,3 +14,6 @@ RUN sed -i "/cd tests/d" Makefile
 
 # Build
 RUN make
+
+# Install to a temporary directory
+RUN make install DESTDIR=/tmp/package-dir

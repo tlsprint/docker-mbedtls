@@ -9,3 +9,6 @@ RUN git clone --branch polarssl-0.13.1 --depth 1 https://github.com/ARMmbed/mbed
 
 # Build
 RUN make
+
+# Install to a temporary directory
+RUN make install DESTDIR=/tmp/package-dir

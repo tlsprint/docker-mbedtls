@@ -9,3 +9,6 @@ RUN git clone --branch mbedtls-2.1.10 --depth 1 https://github.com/ARMmbed/mbedt
 
 # Build
 RUN make
+
+# Install to a temporary directory
+RUN make install DESTDIR=/tmp/package-dir

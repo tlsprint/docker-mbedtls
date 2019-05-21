@@ -9,3 +9,6 @@ RUN git clone --branch polarssl-1.2.9 --depth 1 https://github.com/ARMmbed/mbedt
 
 # Build
 RUN make
+
+# Install to a temporary directory
+RUN make install DESTDIR=/tmp/package-dir
