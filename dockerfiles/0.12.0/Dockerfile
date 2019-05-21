@@ -7,5 +7,10 @@ FROM buildpack-deps AS builder
 WORKDIR /mbedtls
 RUN git clone --branch polarssl-0.12.0 --depth 1 https://github.com/ARMmbed/mbedtls.git .
 
+# The test fail to build on this version, but the program and libraries build
+# just fine. To work around this issue, remove the lines from the Makefile that
+# specify the tests.
+RUN sed -i "/cd tests/d" Makefile
+
 # Build
 RUN make
