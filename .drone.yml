@@ -12,21 +12,19 @@ steps:
       dockerfile: dockerfiles/1.0.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.0.0
-#       commands:
-#         - mbedtls --version | grep 1.0.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.0.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -42,21 +40,19 @@ steps:
       dockerfile: dockerfiles/1.1.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.0
-#       commands:
-#         - mbedtls --version | grep 1.1.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -72,21 +68,19 @@ steps:
       dockerfile: dockerfiles/1.1.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.1
-#       commands:
-#         - mbedtls --version | grep 1.1.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -102,21 +96,19 @@ steps:
       dockerfile: dockerfiles/1.1.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.2
-#       commands:
-#         - mbedtls --version | grep 1.1.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -132,21 +124,19 @@ steps:
       dockerfile: dockerfiles/1.1.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.3
-#       commands:
-#         - mbedtls --version | grep 1.1.3
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.3
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -162,21 +152,19 @@ steps:
       dockerfile: dockerfiles/1.1.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.4
-#       commands:
-#         - mbedtls --version | grep 1.1.4
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.4
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -192,21 +180,19 @@ steps:
       dockerfile: dockerfiles/1.1.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.5
-#       commands:
-#         - mbedtls --version | grep 1.1.5
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.5
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -222,21 +208,19 @@ steps:
       dockerfile: dockerfiles/1.1.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.6
-#       commands:
-#         - mbedtls --version | grep 1.1.6
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.6
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -252,21 +236,19 @@ steps:
       dockerfile: dockerfiles/1.1.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.7
-#       commands:
-#         - mbedtls --version | grep 1.1.7
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.7
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -282,21 +264,19 @@ steps:
       dockerfile: dockerfiles/1.1.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.1.8
-#       commands:
-#         - mbedtls --version | grep 1.1.8
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.1.8
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -312,21 +292,19 @@ steps:
       dockerfile: dockerfiles/1.2.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.0
-#       commands:
-#         - mbedtls --version | grep 1.2.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -342,321 +320,19 @@ steps:
       dockerfile: dockerfiles/1.2.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.1
-#       commands:
-#         - mbedtls --version | grep 1.2.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.10
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.10
-      dockerfile: dockerfiles/1.2.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.10
-#       commands:
-#         - mbedtls --version | grep 1.2.10
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.11
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.11
-      dockerfile: dockerfiles/1.2.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.11
-#       commands:
-#         - mbedtls --version | grep 1.2.11
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.12
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.12
-      dockerfile: dockerfiles/1.2.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.12
-#       commands:
-#         - mbedtls --version | grep 1.2.12
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.13
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.13
-      dockerfile: dockerfiles/1.2.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.13
-#       commands:
-#         - mbedtls --version | grep 1.2.13
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.14
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.14
-      dockerfile: dockerfiles/1.2.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.14
-#       commands:
-#         - mbedtls --version | grep 1.2.14
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.15
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.15
-      dockerfile: dockerfiles/1.2.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.15
-#       commands:
-#         - mbedtls --version | grep 1.2.15
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.16
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.16
-      dockerfile: dockerfiles/1.2.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.16
-#       commands:
-#         - mbedtls --version | grep 1.2.16
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.17
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.17
-      dockerfile: dockerfiles/1.2.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.17
-#       commands:
-#         - mbedtls --version | grep 1.2.17
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.18
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.18
-      dockerfile: dockerfiles/1.2.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.18
-#       commands:
-#         - mbedtls --version | grep 1.2.18
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.2.19
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.19
-      dockerfile: dockerfiles/1.2.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.19
-#       commands:
-#         - mbedtls --version | grep 1.2.19
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -672,21 +348,19 @@ steps:
       dockerfile: dockerfiles/1.2.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.2
-#       commands:
-#         - mbedtls --version | grep 1.2.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -702,21 +376,19 @@ steps:
       dockerfile: dockerfiles/1.2.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.3
-#       commands:
-#         - mbedtls --version | grep 1.2.3
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.3
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -732,21 +404,19 @@ steps:
       dockerfile: dockerfiles/1.2.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.4
-#       commands:
-#         - mbedtls --version | grep 1.2.4
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.4
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -762,21 +432,19 @@ steps:
       dockerfile: dockerfiles/1.2.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.5
-#       commands:
-#         - mbedtls --version | grep 1.2.5
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.5
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -792,21 +460,19 @@ steps:
       dockerfile: dockerfiles/1.2.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.6
-#       commands:
-#         - mbedtls --version | grep 1.2.6
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.6
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -822,21 +488,19 @@ steps:
       dockerfile: dockerfiles/1.2.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.7
-#       commands:
-#         - mbedtls --version | grep 1.2.7
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.7
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -852,21 +516,19 @@ steps:
       dockerfile: dockerfiles/1.2.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.8
-#       commands:
-#         - mbedtls --version | grep 1.2.8
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.8
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -882,21 +544,299 @@ steps:
       dockerfile: dockerfiles/1.2.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.2.9
-#       commands:
-#         - mbedtls --version | grep 1.2.9
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.9
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.10
+      dockerfile: dockerfiles/1.2.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.10
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.11
+      dockerfile: dockerfiles/1.2.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.11
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.12
+      dockerfile: dockerfiles/1.2.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.12
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.13
+      dockerfile: dockerfiles/1.2.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.13
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.14
+      dockerfile: dockerfiles/1.2.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.14
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.15
+      dockerfile: dockerfiles/1.2.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.15
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.16
+      dockerfile: dockerfiles/1.2.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.16
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.17
+      dockerfile: dockerfiles/1.2.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.17
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.18
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.18
+      dockerfile: dockerfiles/1.2.18/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.18
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.2.19
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.2.19
+      dockerfile: dockerfiles/1.2.19/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.2.19
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -912,21 +852,19 @@ steps:
       dockerfile: dockerfiles/1.3.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.0
-#       commands:
-#         - mbedtls --version | grep 1.3.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -942,321 +880,19 @@ steps:
       dockerfile: dockerfiles/1.3.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.1
-#       commands:
-#         - mbedtls --version | grep 1.3.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.10
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.10
-      dockerfile: dockerfiles/1.3.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.10
-#       commands:
-#         - mbedtls --version | grep 1.3.10
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.11
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.11
-      dockerfile: dockerfiles/1.3.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.11
-#       commands:
-#         - mbedtls --version | grep 1.3.11
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.12
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.12
-      dockerfile: dockerfiles/1.3.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.12
-#       commands:
-#         - mbedtls --version | grep 1.3.12
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.13
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.13
-      dockerfile: dockerfiles/1.3.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.13
-#       commands:
-#         - mbedtls --version | grep 1.3.13
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.14
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.14
-      dockerfile: dockerfiles/1.3.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.14
-#       commands:
-#         - mbedtls --version | grep 1.3.14
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.15
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.15
-      dockerfile: dockerfiles/1.3.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.15
-#       commands:
-#         - mbedtls --version | grep 1.3.15
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.16
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.16
-      dockerfile: dockerfiles/1.3.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.16
-#       commands:
-#         - mbedtls --version | grep 1.3.16
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.17
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.17
-      dockerfile: dockerfiles/1.3.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.17
-#       commands:
-#         - mbedtls --version | grep 1.3.17
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.18
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.18
-      dockerfile: dockerfiles/1.3.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.18
-#       commands:
-#         - mbedtls --version | grep 1.3.18
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.19
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.19
-      dockerfile: dockerfiles/1.3.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.19
-#       commands:
-#         - mbedtls --version | grep 1.3.19
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1272,111 +908,19 @@ steps:
       dockerfile: dockerfiles/1.3.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.2
-#       commands:
-#         - mbedtls --version | grep 1.3.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.20
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.20
-      dockerfile: dockerfiles/1.3.20/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.20
-#       commands:
-#         - mbedtls --version | grep 1.3.20
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.21
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.21
-      dockerfile: dockerfiles/1.3.21/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.21
-#       commands:
-#         - mbedtls --version | grep 1.3.21
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 1.3.22
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.22
-      dockerfile: dockerfiles/1.3.22/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.22
-#       commands:
-#         - mbedtls --version | grep 1.3.22
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1392,21 +936,19 @@ steps:
       dockerfile: dockerfiles/1.3.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.3
-#       commands:
-#         - mbedtls --version | grep 1.3.3
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.3
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1422,21 +964,19 @@ steps:
       dockerfile: dockerfiles/1.3.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.4
-#       commands:
-#         - mbedtls --version | grep 1.3.4
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.4
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1452,21 +992,19 @@ steps:
       dockerfile: dockerfiles/1.3.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.5
-#       commands:
-#         - mbedtls --version | grep 1.3.5
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.5
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1482,21 +1020,19 @@ steps:
       dockerfile: dockerfiles/1.3.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.6
-#       commands:
-#         - mbedtls --version | grep 1.3.6
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.6
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1512,21 +1048,19 @@ steps:
       dockerfile: dockerfiles/1.3.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.7
-#       commands:
-#         - mbedtls --version | grep 1.3.7
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.7
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1542,21 +1076,19 @@ steps:
       dockerfile: dockerfiles/1.3.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.8
-#       commands:
-#         - mbedtls --version | grep 1.3.8
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.8
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1572,21 +1104,383 @@ steps:
       dockerfile: dockerfiles/1.3.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:1.3.9
-#       commands:
-#         - mbedtls --version | grep 1.3.9
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.9
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.10
+      dockerfile: dockerfiles/1.3.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.10
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.11
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.11
+      dockerfile: dockerfiles/1.3.11/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.11
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.12
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.12
+      dockerfile: dockerfiles/1.3.12/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.12
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.13
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.13
+      dockerfile: dockerfiles/1.3.13/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.13
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.14
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.14
+      dockerfile: dockerfiles/1.3.14/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.14
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.15
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.15
+      dockerfile: dockerfiles/1.3.15/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.15
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.16
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.16
+      dockerfile: dockerfiles/1.3.16/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.16
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.17
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.17
+      dockerfile: dockerfiles/1.3.17/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.17
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.18
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.18
+      dockerfile: dockerfiles/1.3.18/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.18
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.19
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.19
+      dockerfile: dockerfiles/1.3.19/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.19
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.20
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.20
+      dockerfile: dockerfiles/1.3.20/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.20
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.21
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.21
+      dockerfile: dockerfiles/1.3.21/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.21
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 1.3.22
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 1.3.22
+      dockerfile: dockerfiles/1.3.22/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:1.3.22
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1602,21 +1496,19 @@ steps:
       dockerfile: dockerfiles/2.0.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.0.0
-#       commands:
-#         - mbedtls --version | grep 2.0.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.0.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1632,21 +1524,19 @@ steps:
       dockerfile: dockerfiles/2.1.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.0
-#       commands:
-#         - mbedtls --version | grep 2.1.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1662,291 +1552,19 @@ steps:
       dockerfile: dockerfiles/2.1.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.1
-#       commands:
-#         - mbedtls --version | grep 2.1.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.10
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.10
-      dockerfile: dockerfiles/2.1.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.10
-#       commands:
-#         - mbedtls --version | grep 2.1.10
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.11
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.11
-      dockerfile: dockerfiles/2.1.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.11
-#       commands:
-#         - mbedtls --version | grep 2.1.11
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.12
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.12
-      dockerfile: dockerfiles/2.1.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.12
-#       commands:
-#         - mbedtls --version | grep 2.1.12
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.13
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.13
-      dockerfile: dockerfiles/2.1.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.13
-#       commands:
-#         - mbedtls --version | grep 2.1.13
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.14
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.14
-      dockerfile: dockerfiles/2.1.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.14
-#       commands:
-#         - mbedtls --version | grep 2.1.14
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.15
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.15
-      dockerfile: dockerfiles/2.1.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.15
-#       commands:
-#         - mbedtls --version | grep 2.1.15
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.16
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.16
-      dockerfile: dockerfiles/2.1.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.16
-#       commands:
-#         - mbedtls --version | grep 2.1.16
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.17
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.17
-      dockerfile: dockerfiles/2.1.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.17
-#       commands:
-#         - mbedtls --version | grep 2.1.17
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.1.18
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.18
-      dockerfile: dockerfiles/2.1.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.18
-#       commands:
-#         - mbedtls --version | grep 2.1.18
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1962,21 +1580,19 @@ steps:
       dockerfile: dockerfiles/2.1.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.2
-#       commands:
-#         - mbedtls --version | grep 2.1.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -1992,21 +1608,19 @@ steps:
       dockerfile: dockerfiles/2.1.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.3
-#       commands:
-#         - mbedtls --version | grep 2.1.3
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.3
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2022,21 +1636,19 @@ steps:
       dockerfile: dockerfiles/2.1.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.4
-#       commands:
-#         - mbedtls --version | grep 2.1.4
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.4
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2052,21 +1664,19 @@ steps:
       dockerfile: dockerfiles/2.1.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.5
-#       commands:
-#         - mbedtls --version | grep 2.1.5
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.5
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2082,21 +1692,19 @@ steps:
       dockerfile: dockerfiles/2.1.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.6
-#       commands:
-#         - mbedtls --version | grep 2.1.6
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.6
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2112,21 +1720,19 @@ steps:
       dockerfile: dockerfiles/2.1.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.7
-#       commands:
-#         - mbedtls --version | grep 2.1.7
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.7
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2142,21 +1748,19 @@ steps:
       dockerfile: dockerfiles/2.1.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.8
-#       commands:
-#         - mbedtls --version | grep 2.1.8
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.8
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2172,25 +1776,23 @@ steps:
       dockerfile: dockerfiles/2.1.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.1.9
-#       commands:
-#         - mbedtls --version | grep 2.1.9
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.9
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.10.0
+name: 2.1.10
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2198,29 +1800,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.10.0
-      dockerfile: dockerfiles/2.10.0/Dockerfile
+      tags: 2.1.10
+      dockerfile: dockerfiles/2.1.10/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.10.0
-#       commands:
-#         - mbedtls --version | grep 2.10.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.10
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.11.0
+name: 2.1.11
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2228,29 +1828,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.11.0
-      dockerfile: dockerfiles/2.11.0/Dockerfile
+      tags: 2.1.11
+      dockerfile: dockerfiles/2.1.11/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.11.0
-#       commands:
-#         - mbedtls --version | grep 2.11.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.11
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.12.0
+name: 2.1.12
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2258,29 +1856,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.12.0
-      dockerfile: dockerfiles/2.12.0/Dockerfile
+      tags: 2.1.12
+      dockerfile: dockerfiles/2.1.12/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.12.0
-#       commands:
-#         - mbedtls --version | grep 2.12.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.12
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.13.0
+name: 2.1.13
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2288,29 +1884,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.13.0
-      dockerfile: dockerfiles/2.13.0/Dockerfile
+      tags: 2.1.13
+      dockerfile: dockerfiles/2.1.13/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.13.0
-#       commands:
-#         - mbedtls --version | grep 2.13.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.13
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.13.1
+name: 2.1.14
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2318,29 +1912,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.13.1
-      dockerfile: dockerfiles/2.13.1/Dockerfile
+      tags: 2.1.14
+      dockerfile: dockerfiles/2.1.14/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.13.1
-#       commands:
-#         - mbedtls --version | grep 2.13.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.14
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.14.0
+name: 2.1.15
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2348,29 +1940,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.14.0
-      dockerfile: dockerfiles/2.14.0/Dockerfile
+      tags: 2.1.15
+      dockerfile: dockerfiles/2.1.15/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.14.0
-#       commands:
-#         - mbedtls --version | grep 2.14.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.15
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.14.1
+name: 2.1.16
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2378,29 +1968,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.14.1
-      dockerfile: dockerfiles/2.14.1/Dockerfile
+      tags: 2.1.16
+      dockerfile: dockerfiles/2.1.16/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.14.1
-#       commands:
-#         - mbedtls --version | grep 2.14.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.16
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.15.0
+name: 2.1.17
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2408,29 +1996,27 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.15.0
-      dockerfile: dockerfiles/2.15.0/Dockerfile
+      tags: 2.1.17
+      dockerfile: dockerfiles/2.1.17/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.15.0
-#       commands:
-#         - mbedtls --version | grep 2.15.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.17
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
-name: 2.15.1
+name: 2.1.18
 
 steps:
     # Build the implementation and set the appropriate tag
@@ -2438,115 +2024,23 @@ steps:
     image: plugins/docker
     settings:
       repo: tlsprint/mbedtls
-      tags: 2.15.1
-      dockerfile: dockerfiles/2.15.1/Dockerfile
+      tags: 2.1.18
+      dockerfile: dockerfiles/2.1.18/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.15.1
-#       commands:
-#         - mbedtls --version | grep 2.15.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.1.18
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.16.0
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.16.0
-      dockerfile: dockerfiles/2.16.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.16.0
-#       commands:
-#         - mbedtls --version | grep 2.16.0
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.16.1
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.16.1
-      dockerfile: dockerfiles/2.16.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.16.1
-#       commands:
-#         - mbedtls --version | grep 2.16.1
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.17.0
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.17.0
-      dockerfile: dockerfiles/2.17.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.17.0
-#       commands:
-#         - mbedtls --version | grep 2.17.0
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2562,21 +2056,19 @@ steps:
       dockerfile: dockerfiles/2.2.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.2.0
-#       commands:
-#         - mbedtls --version | grep 2.2.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.2.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2592,21 +2084,19 @@ steps:
       dockerfile: dockerfiles/2.2.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.2.1
-#       commands:
-#         - mbedtls --version | grep 2.2.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.2.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2622,21 +2112,19 @@ steps:
       dockerfile: dockerfiles/2.3.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.3.0
-#       commands:
-#         - mbedtls --version | grep 2.3.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.3.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2652,21 +2140,19 @@ steps:
       dockerfile: dockerfiles/2.4.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.4.0
-#       commands:
-#         - mbedtls --version | grep 2.4.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.4.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2682,21 +2168,19 @@ steps:
       dockerfile: dockerfiles/2.4.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.4.1
-#       commands:
-#         - mbedtls --version | grep 2.4.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.4.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2712,21 +2196,19 @@ steps:
       dockerfile: dockerfiles/2.4.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.4.2
-#       commands:
-#         - mbedtls --version | grep 2.4.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.4.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2742,21 +2224,19 @@ steps:
       dockerfile: dockerfiles/2.5.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.5.0
-#       commands:
-#         - mbedtls --version | grep 2.5.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.5.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2772,21 +2252,19 @@ steps:
       dockerfile: dockerfiles/2.5.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.5.1
-#       commands:
-#         - mbedtls --version | grep 2.5.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.5.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2802,21 +2280,19 @@ steps:
       dockerfile: dockerfiles/2.6.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.6.0
-#       commands:
-#         - mbedtls --version | grep 2.6.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.6.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2832,21 +2308,19 @@ steps:
       dockerfile: dockerfiles/2.6.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.6.1
-#       commands:
-#         - mbedtls --version | grep 2.6.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.6.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2862,21 +2336,19 @@ steps:
       dockerfile: dockerfiles/2.7.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.0
-#       commands:
-#         - mbedtls --version | grep 2.7.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2892,51 +2364,19 @@ steps:
       dockerfile: dockerfiles/2.7.1/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.1
-#       commands:
-#         - mbedtls --version | grep 2.7.1
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.1
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
-
----
-kind: pipeline
-name: 2.7.10
-
-steps:
-    # Build the implementation and set the appropriate tag
-  - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.10
-      dockerfile: dockerfiles/2.7.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
-
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.10
-#       commands:
-#         - mbedtls --version | grep 2.7.10
-
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2952,21 +2392,19 @@ steps:
       dockerfile: dockerfiles/2.7.2/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.2
-#       commands:
-#         - mbedtls --version | grep 2.7.2
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.2
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -2982,21 +2420,19 @@ steps:
       dockerfile: dockerfiles/2.7.3/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.3
-#       commands:
-#         - mbedtls --version | grep 2.7.3
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.3
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3012,21 +2448,19 @@ steps:
       dockerfile: dockerfiles/2.7.4/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.4
-#       commands:
-#         - mbedtls --version | grep 2.7.4
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.4
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3042,21 +2476,19 @@ steps:
       dockerfile: dockerfiles/2.7.5/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.5
-#       commands:
-#         - mbedtls --version | grep 2.7.5
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.5
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3072,21 +2504,19 @@ steps:
       dockerfile: dockerfiles/2.7.6/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.6
-#       commands:
-#         - mbedtls --version | grep 2.7.6
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.6
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3102,21 +2532,19 @@ steps:
       dockerfile: dockerfiles/2.7.7/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.7
-#       commands:
-#         - mbedtls --version | grep 2.7.7
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.7
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3132,21 +2560,19 @@ steps:
       dockerfile: dockerfiles/2.7.8/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.8
-#       commands:
-#         - mbedtls --version | grep 2.7.8
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.8
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3162,21 +2588,47 @@ steps:
       dockerfile: dockerfiles/2.7.9/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.7.9
-#       commands:
-#         - mbedtls --version | grep 2.7.9
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.9
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.7.10
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.7.10
+      dockerfile: dockerfiles/2.7.10/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.7.10
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3192,21 +2644,19 @@ steps:
       dockerfile: dockerfiles/2.8.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.8.0
-#       commands:
-#         - mbedtls --version | grep 2.8.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.8.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
 ---
 kind: pipeline
@@ -3222,19 +2672,353 @@ steps:
       dockerfile: dockerfiles/2.9.0/Dockerfile
       dry_run: true  # Do not push at the end of this step
       purge: false
-#     volumes:
-#       - name: docker
-#         path: /var/run/docker.sock
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
 
-    # Verify that the implementation can be executed, and has the correct
-    # version installed.
-#   - name: start
-#     image: tlsprint/mbedtls:2.9.0
-#       commands:
-#         - mbedtls --version | grep 2.9.0
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.9.0
+    detach: true
 
-# volumes:
-#   - name: docker
-#     host:
-#       path: /var/run/docker.sock
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.10.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.10.0
+      dockerfile: dockerfiles/2.10.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.10.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.11.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.11.0
+      dockerfile: dockerfiles/2.11.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.11.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.12.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.12.0
+      dockerfile: dockerfiles/2.12.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.12.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.13.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.13.0
+      dockerfile: dockerfiles/2.13.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.13.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.13.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.13.1
+      dockerfile: dockerfiles/2.13.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.13.1
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.14.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.14.0
+      dockerfile: dockerfiles/2.14.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.14.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.14.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.14.1
+      dockerfile: dockerfiles/2.14.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.14.1
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.15.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.15.0
+      dockerfile: dockerfiles/2.15.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.15.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.15.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.15.1
+      dockerfile: dockerfiles/2.15.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.15.1
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.16.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.16.0
+      dockerfile: dockerfiles/2.16.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.16.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.16.1
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.16.1
+      dockerfile: dockerfiles/2.16.1/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.16.1
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
+
+---
+kind: pipeline
+name: 2.17.0
+
+steps:
+    # Build the implementation and set the appropriate tag
+  - name: build
+    image: plugins/docker
+    settings:
+      repo: tlsprint/mbedtls
+      tags: 2.17.0
+      dockerfile: dockerfiles/2.17.0/Dockerfile
+      dry_run: true  # Do not push at the end of this step
+      purge: false
+    volumes:
+      - name: docker
+        path: /var/run/docker.sock
+
+    # Start the implementation, the system under test, in the background
+  - name: sut
+    image: tlsprint/mbedtls:2.17.0
+    detach: true
+
+volumes:
+  - name: docker
+    host:
+      path: /var/run/docker.sock
 
