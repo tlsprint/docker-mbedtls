@@ -22,3 +22,9 @@ RUN make install DESTDIR=/tmp/package-dir
 FROM debian
 COPY --from=builder /tmp/package-dir /
 RUN ldconfig
+
+# Expose the default port
+EXPOSE 4433
+
+# Start the server
+CMD ssl_server
