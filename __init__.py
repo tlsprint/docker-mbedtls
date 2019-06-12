@@ -16,4 +16,8 @@ def extract_versions(tags):
     # target.
     version_info = [info for info in version_info if info["version"]  >= "1.0"]
 
+    # Add info about supported TLS versions
+    for info in version_info:
+        info["supported_tls"] = ["TLS10", "TLS11", "TLS12"]
+
     return version_info
