@@ -27,4 +27,4 @@ RUN ldconfig
 EXPOSE 4433
 
 # Start the server
-CMD ssl_fork_server
+CMD ssl_server
