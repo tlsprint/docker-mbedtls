@@ -7,6 +7,11 @@ FROM buildpack-deps AS builder
 WORKDIR /mbedtls
 RUN git clone --branch polarssl-1.2.5 --depth 1 https://github.com/ARMmbed/mbedtls.git .
 
+# Version 1.2.10 and earlier do not have a properly working ssl_server.c file.
+# By copying a more recent version (from 1.2.11), this is mitigated.
+RUN wget -O programs/ssl/ssl_server.c https://raw.githubusercontent.com/ARMmbed/mbedtls/polarssl-1.2.11/programs/ssl/ssl_server.c
+RUN wget -O programs/ssl/ssl_server2.c https://raw.githubusercontent.com/ARMmbed/mbedtls/polarssl-1.2.11/programs/ssl/ssl_server2.c
+
 # Install build depencency cmake
 RUN apt-get update && apt-get install -y cmake
 
