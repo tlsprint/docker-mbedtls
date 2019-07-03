@@ -1,3 +1,7 @@
+def get_supported_tls(version):
+    return ["TLS10", "TLS11", "TLS12"]
+
+
 def extract_versions(tags):
     # Only keep the tags that mark a release. These start with 'mbedtls' or
     # 'polarssl'.
@@ -18,6 +22,6 @@ def extract_versions(tags):
 
     # Add info about supported TLS versions
     for info in version_info:
-        info["supported_tls"] = ["TLS10", "TLS11", "TLS12"]
+        info["supported_tls"] = get_supported_tls(info["version"])
 
     return version_info
