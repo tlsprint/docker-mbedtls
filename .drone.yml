@@ -5,13 +5,11 @@ name: 1.0.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.0.0
-      dockerfile: dockerfiles/1.0.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.0.0
+        --file dockerfiles/1.0.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -90,13 +88,11 @@ name: 1.1.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.0
-      dockerfile: dockerfiles/1.1.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.0
+        --file dockerfiles/1.1.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -175,13 +171,11 @@ name: 1.1.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.1
-      dockerfile: dockerfiles/1.1.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.1
+        --file dockerfiles/1.1.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -260,13 +254,11 @@ name: 1.1.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.2
-      dockerfile: dockerfiles/1.1.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.2
+        --file dockerfiles/1.1.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -345,13 +337,11 @@ name: 1.1.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.3
-      dockerfile: dockerfiles/1.1.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.3
+        --file dockerfiles/1.1.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -430,13 +420,11 @@ name: 1.1.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.4
-      dockerfile: dockerfiles/1.1.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.4
+        --file dockerfiles/1.1.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -515,13 +503,11 @@ name: 1.1.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.5
-      dockerfile: dockerfiles/1.1.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.5
+        --file dockerfiles/1.1.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -600,13 +586,11 @@ name: 1.1.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.6
-      dockerfile: dockerfiles/1.1.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.6
+        --file dockerfiles/1.1.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -685,13 +669,11 @@ name: 1.1.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.7
-      dockerfile: dockerfiles/1.1.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.7
+        --file dockerfiles/1.1.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -770,13 +752,11 @@ name: 1.1.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.1.8
-      dockerfile: dockerfiles/1.1.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.1.8
+        --file dockerfiles/1.1.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -855,13 +835,11 @@ name: 1.2.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.0
-      dockerfile: dockerfiles/1.2.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.0
+        --file dockerfiles/1.2.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -940,13 +918,11 @@ name: 1.2.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.1
-      dockerfile: dockerfiles/1.2.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.1
+        --file dockerfiles/1.2.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1025,13 +1001,11 @@ name: 1.2.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.2
-      dockerfile: dockerfiles/1.2.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.2
+        --file dockerfiles/1.2.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1110,13 +1084,11 @@ name: 1.2.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.3
-      dockerfile: dockerfiles/1.2.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.3
+        --file dockerfiles/1.2.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1195,13 +1167,11 @@ name: 1.2.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.4
-      dockerfile: dockerfiles/1.2.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.4
+        --file dockerfiles/1.2.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1280,13 +1250,11 @@ name: 1.2.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.5
-      dockerfile: dockerfiles/1.2.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.5
+        --file dockerfiles/1.2.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1365,13 +1333,11 @@ name: 1.2.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.6
-      dockerfile: dockerfiles/1.2.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.6
+        --file dockerfiles/1.2.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1450,13 +1416,11 @@ name: 1.2.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.7
-      dockerfile: dockerfiles/1.2.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.7
+        --file dockerfiles/1.2.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1535,13 +1499,11 @@ name: 1.2.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.8
-      dockerfile: dockerfiles/1.2.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.8
+        --file dockerfiles/1.2.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1620,13 +1582,11 @@ name: 1.2.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.9
-      dockerfile: dockerfiles/1.2.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.9
+        --file dockerfiles/1.2.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1705,13 +1665,11 @@ name: 1.2.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.10
-      dockerfile: dockerfiles/1.2.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.10
+        --file dockerfiles/1.2.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1790,13 +1748,11 @@ name: 1.2.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.11
-      dockerfile: dockerfiles/1.2.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.11
+        --file dockerfiles/1.2.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1875,13 +1831,11 @@ name: 1.2.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.12
-      dockerfile: dockerfiles/1.2.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.12
+        --file dockerfiles/1.2.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -1960,13 +1914,11 @@ name: 1.2.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.13
-      dockerfile: dockerfiles/1.2.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.13
+        --file dockerfiles/1.2.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2045,13 +1997,11 @@ name: 1.2.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.14
-      dockerfile: dockerfiles/1.2.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.14
+        --file dockerfiles/1.2.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2130,13 +2080,11 @@ name: 1.2.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.15
-      dockerfile: dockerfiles/1.2.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.15
+        --file dockerfiles/1.2.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2215,13 +2163,11 @@ name: 1.2.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.16
-      dockerfile: dockerfiles/1.2.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.16
+        --file dockerfiles/1.2.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2300,13 +2246,11 @@ name: 1.2.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.17
-      dockerfile: dockerfiles/1.2.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.17
+        --file dockerfiles/1.2.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2385,13 +2329,11 @@ name: 1.2.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.18
-      dockerfile: dockerfiles/1.2.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.18
+        --file dockerfiles/1.2.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2470,13 +2412,11 @@ name: 1.2.19
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.2.19
-      dockerfile: dockerfiles/1.2.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.2.19
+        --file dockerfiles/1.2.19/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2555,13 +2495,11 @@ name: 1.3.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.0
-      dockerfile: dockerfiles/1.3.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.0
+        --file dockerfiles/1.3.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2640,13 +2578,11 @@ name: 1.3.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.1
-      dockerfile: dockerfiles/1.3.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.1
+        --file dockerfiles/1.3.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2725,13 +2661,11 @@ name: 1.3.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.2
-      dockerfile: dockerfiles/1.3.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.2
+        --file dockerfiles/1.3.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2810,13 +2744,11 @@ name: 1.3.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.3
-      dockerfile: dockerfiles/1.3.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.3
+        --file dockerfiles/1.3.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2895,13 +2827,11 @@ name: 1.3.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.4
-      dockerfile: dockerfiles/1.3.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.4
+        --file dockerfiles/1.3.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -2980,13 +2910,11 @@ name: 1.3.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.5
-      dockerfile: dockerfiles/1.3.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.5
+        --file dockerfiles/1.3.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3065,13 +2993,11 @@ name: 1.3.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.6
-      dockerfile: dockerfiles/1.3.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.6
+        --file dockerfiles/1.3.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3150,13 +3076,11 @@ name: 1.3.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.7
-      dockerfile: dockerfiles/1.3.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.7
+        --file dockerfiles/1.3.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3235,13 +3159,11 @@ name: 1.3.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.8
-      dockerfile: dockerfiles/1.3.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.8
+        --file dockerfiles/1.3.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3320,13 +3242,11 @@ name: 1.3.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.9
-      dockerfile: dockerfiles/1.3.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.9
+        --file dockerfiles/1.3.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3405,13 +3325,11 @@ name: 1.3.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.10
-      dockerfile: dockerfiles/1.3.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.10
+        --file dockerfiles/1.3.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3490,13 +3408,11 @@ name: 1.3.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.11
-      dockerfile: dockerfiles/1.3.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.11
+        --file dockerfiles/1.3.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3575,13 +3491,11 @@ name: 1.3.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.12
-      dockerfile: dockerfiles/1.3.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.12
+        --file dockerfiles/1.3.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3660,13 +3574,11 @@ name: 1.3.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.13
-      dockerfile: dockerfiles/1.3.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.13
+        --file dockerfiles/1.3.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3745,13 +3657,11 @@ name: 1.3.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.14
-      dockerfile: dockerfiles/1.3.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.14
+        --file dockerfiles/1.3.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3830,13 +3740,11 @@ name: 1.3.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.15
-      dockerfile: dockerfiles/1.3.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.15
+        --file dockerfiles/1.3.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -3915,13 +3823,11 @@ name: 1.3.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.16
-      dockerfile: dockerfiles/1.3.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.16
+        --file dockerfiles/1.3.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4000,13 +3906,11 @@ name: 1.3.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.17
-      dockerfile: dockerfiles/1.3.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.17
+        --file dockerfiles/1.3.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4085,13 +3989,11 @@ name: 1.3.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.18
-      dockerfile: dockerfiles/1.3.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.18
+        --file dockerfiles/1.3.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4170,13 +4072,11 @@ name: 1.3.19
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.19
-      dockerfile: dockerfiles/1.3.19/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.19
+        --file dockerfiles/1.3.19/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4255,13 +4155,11 @@ name: 1.3.20
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.20
-      dockerfile: dockerfiles/1.3.20/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.20
+        --file dockerfiles/1.3.20/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4340,13 +4238,11 @@ name: 1.3.21
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.21
-      dockerfile: dockerfiles/1.3.21/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.21
+        --file dockerfiles/1.3.21/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4425,13 +4321,11 @@ name: 1.3.22
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 1.3.22
-      dockerfile: dockerfiles/1.3.22/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:1.3.22
+        --file dockerfiles/1.3.22/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4510,13 +4404,11 @@ name: 2.0.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.0.0
-      dockerfile: dockerfiles/2.0.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.0.0
+        --file dockerfiles/2.0.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4595,13 +4487,11 @@ name: 2.1.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.0
-      dockerfile: dockerfiles/2.1.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.0
+        --file dockerfiles/2.1.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4680,13 +4570,11 @@ name: 2.1.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.1
-      dockerfile: dockerfiles/2.1.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.1
+        --file dockerfiles/2.1.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4765,13 +4653,11 @@ name: 2.1.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.2
-      dockerfile: dockerfiles/2.1.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.2
+        --file dockerfiles/2.1.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4850,13 +4736,11 @@ name: 2.1.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.3
-      dockerfile: dockerfiles/2.1.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.3
+        --file dockerfiles/2.1.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -4935,13 +4819,11 @@ name: 2.1.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.4
-      dockerfile: dockerfiles/2.1.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.4
+        --file dockerfiles/2.1.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5020,13 +4902,11 @@ name: 2.1.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.5
-      dockerfile: dockerfiles/2.1.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.5
+        --file dockerfiles/2.1.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5105,13 +4985,11 @@ name: 2.1.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.6
-      dockerfile: dockerfiles/2.1.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.6
+        --file dockerfiles/2.1.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5190,13 +5068,11 @@ name: 2.1.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.7
-      dockerfile: dockerfiles/2.1.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.7
+        --file dockerfiles/2.1.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5275,13 +5151,11 @@ name: 2.1.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.8
-      dockerfile: dockerfiles/2.1.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.8
+        --file dockerfiles/2.1.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5360,13 +5234,11 @@ name: 2.1.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.9
-      dockerfile: dockerfiles/2.1.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.9
+        --file dockerfiles/2.1.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5445,13 +5317,11 @@ name: 2.1.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.10
-      dockerfile: dockerfiles/2.1.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.10
+        --file dockerfiles/2.1.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5530,13 +5400,11 @@ name: 2.1.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.11
-      dockerfile: dockerfiles/2.1.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.11
+        --file dockerfiles/2.1.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5615,13 +5483,11 @@ name: 2.1.12
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.12
-      dockerfile: dockerfiles/2.1.12/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.12
+        --file dockerfiles/2.1.12/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5700,13 +5566,11 @@ name: 2.1.13
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.13
-      dockerfile: dockerfiles/2.1.13/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.13
+        --file dockerfiles/2.1.13/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5785,13 +5649,11 @@ name: 2.1.14
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.14
-      dockerfile: dockerfiles/2.1.14/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.14
+        --file dockerfiles/2.1.14/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5870,13 +5732,11 @@ name: 2.1.15
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.15
-      dockerfile: dockerfiles/2.1.15/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.15
+        --file dockerfiles/2.1.15/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -5955,13 +5815,11 @@ name: 2.1.16
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.16
-      dockerfile: dockerfiles/2.1.16/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.16
+        --file dockerfiles/2.1.16/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6040,13 +5898,11 @@ name: 2.1.17
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.17
-      dockerfile: dockerfiles/2.1.17/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.17
+        --file dockerfiles/2.1.17/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6125,13 +5981,11 @@ name: 2.1.18
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.1.18
-      dockerfile: dockerfiles/2.1.18/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.1.18
+        --file dockerfiles/2.1.18/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6210,13 +6064,11 @@ name: 2.2.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.2.0
-      dockerfile: dockerfiles/2.2.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.2.0
+        --file dockerfiles/2.2.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6295,13 +6147,11 @@ name: 2.2.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.2.1
-      dockerfile: dockerfiles/2.2.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.2.1
+        --file dockerfiles/2.2.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6380,13 +6230,11 @@ name: 2.3.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.3.0
-      dockerfile: dockerfiles/2.3.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.3.0
+        --file dockerfiles/2.3.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6465,13 +6313,11 @@ name: 2.4.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.4.0
-      dockerfile: dockerfiles/2.4.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.4.0
+        --file dockerfiles/2.4.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6550,13 +6396,11 @@ name: 2.4.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.4.1
-      dockerfile: dockerfiles/2.4.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.4.1
+        --file dockerfiles/2.4.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6635,13 +6479,11 @@ name: 2.4.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.4.2
-      dockerfile: dockerfiles/2.4.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.4.2
+        --file dockerfiles/2.4.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6720,13 +6562,11 @@ name: 2.5.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.5.0
-      dockerfile: dockerfiles/2.5.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.5.0
+        --file dockerfiles/2.5.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6805,13 +6645,11 @@ name: 2.5.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.5.1
-      dockerfile: dockerfiles/2.5.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.5.1
+        --file dockerfiles/2.5.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6890,13 +6728,11 @@ name: 2.6.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.6.0
-      dockerfile: dockerfiles/2.6.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.6.0
+        --file dockerfiles/2.6.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -6975,13 +6811,11 @@ name: 2.6.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.6.1
-      dockerfile: dockerfiles/2.6.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.6.1
+        --file dockerfiles/2.6.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7060,13 +6894,11 @@ name: 2.7.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.0
-      dockerfile: dockerfiles/2.7.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.0
+        --file dockerfiles/2.7.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7145,13 +6977,11 @@ name: 2.7.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.1
-      dockerfile: dockerfiles/2.7.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.1
+        --file dockerfiles/2.7.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7230,13 +7060,11 @@ name: 2.7.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.2
-      dockerfile: dockerfiles/2.7.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.2
+        --file dockerfiles/2.7.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7315,13 +7143,11 @@ name: 2.7.3
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.3
-      dockerfile: dockerfiles/2.7.3/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.3
+        --file dockerfiles/2.7.3/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7400,13 +7226,11 @@ name: 2.7.4
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.4
-      dockerfile: dockerfiles/2.7.4/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.4
+        --file dockerfiles/2.7.4/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7485,13 +7309,11 @@ name: 2.7.5
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.5
-      dockerfile: dockerfiles/2.7.5/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.5
+        --file dockerfiles/2.7.5/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7570,13 +7392,11 @@ name: 2.7.6
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.6
-      dockerfile: dockerfiles/2.7.6/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.6
+        --file dockerfiles/2.7.6/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7655,13 +7475,11 @@ name: 2.7.7
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.7
-      dockerfile: dockerfiles/2.7.7/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.7
+        --file dockerfiles/2.7.7/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7740,13 +7558,11 @@ name: 2.7.8
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.8
-      dockerfile: dockerfiles/2.7.8/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.8
+        --file dockerfiles/2.7.8/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7825,13 +7641,11 @@ name: 2.7.9
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.9
-      dockerfile: dockerfiles/2.7.9/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.9
+        --file dockerfiles/2.7.9/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7910,13 +7724,11 @@ name: 2.7.10
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.10
-      dockerfile: dockerfiles/2.7.10/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.10
+        --file dockerfiles/2.7.10/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -7995,13 +7807,11 @@ name: 2.7.11
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.7.11
-      dockerfile: dockerfiles/2.7.11/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.7.11
+        --file dockerfiles/2.7.11/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8080,13 +7890,11 @@ name: 2.8.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.8.0
-      dockerfile: dockerfiles/2.8.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.8.0
+        --file dockerfiles/2.8.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8165,13 +7973,11 @@ name: 2.9.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.9.0
-      dockerfile: dockerfiles/2.9.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.9.0
+        --file dockerfiles/2.9.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8250,13 +8056,11 @@ name: 2.10.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.10.0
-      dockerfile: dockerfiles/2.10.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.10.0
+        --file dockerfiles/2.10.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8335,13 +8139,11 @@ name: 2.11.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.11.0
-      dockerfile: dockerfiles/2.11.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.11.0
+        --file dockerfiles/2.11.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8420,13 +8222,11 @@ name: 2.12.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.12.0
-      dockerfile: dockerfiles/2.12.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.12.0
+        --file dockerfiles/2.12.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8505,13 +8305,11 @@ name: 2.13.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.13.0
-      dockerfile: dockerfiles/2.13.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.13.0
+        --file dockerfiles/2.13.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8590,13 +8388,11 @@ name: 2.13.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.13.1
-      dockerfile: dockerfiles/2.13.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.13.1
+        --file dockerfiles/2.13.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8675,13 +8471,11 @@ name: 2.14.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.14.0
-      dockerfile: dockerfiles/2.14.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.14.0
+        --file dockerfiles/2.14.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8760,13 +8554,11 @@ name: 2.14.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.14.1
-      dockerfile: dockerfiles/2.14.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.14.1
+        --file dockerfiles/2.14.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8845,13 +8637,11 @@ name: 2.15.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.15.0
-      dockerfile: dockerfiles/2.15.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.15.0
+        --file dockerfiles/2.15.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -8930,13 +8720,11 @@ name: 2.15.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.15.1
-      dockerfile: dockerfiles/2.15.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.15.1
+        --file dockerfiles/2.15.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -9015,13 +8803,11 @@ name: 2.16.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.16.0
-      dockerfile: dockerfiles/2.16.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.16.0
+        --file dockerfiles/2.16.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -9100,13 +8886,11 @@ name: 2.16.1
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.16.1
-      dockerfile: dockerfiles/2.16.1/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.16.1
+        --file dockerfiles/2.16.1/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -9185,13 +8969,11 @@ name: 2.16.2
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.16.2
-      dockerfile: dockerfiles/2.16.2/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.16.2
+        --file dockerfiles/2.16.2/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -9270,13 +9052,11 @@ name: 2.17.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.17.0
-      dockerfile: dockerfiles/2.17.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.17.0
+        --file dockerfiles/2.17.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
@@ -9355,13 +9135,11 @@ name: 2.18.0
 steps:
     # Build the implementation and set the appropriate tag
   - name: build
-    image: plugins/docker
-    settings:
-      repo: tlsprint/mbedtls
-      tags: 2.18.0
-      dockerfile: dockerfiles/2.18.0/Dockerfile
-      dry_run: true  # Do not push at the end of this step
-      purge: false
+    image: docker
+    commands:
+      - docker build .
+        --tag tlsprint/mbedtls:2.18.0
+        --file dockerfiles/2.18.0/Dockerfile
 
     # Store the resulting image on the host docker, so it can be used in the
     # next step.
