@@ -10,7 +10,11 @@ FROM buildpack-deps AS builder
 # Create a shallow clone of the implementation repository in the work directory,
 # containing only the code of the specified version/tag.
 WORKDIR /{{ implementation }}
+{%- if not version | in_version_range("2.18", None) %}
 RUN git clone --branch {{ tag }} --depth 1 {{ url }} .
+{%- else %}
+RUN git clone --branch {{ tag }} --depth 1 --recurse-submodules --shallow-submodules {{ url }} .
+{%- endif %}
 
 {%- if version | in_version_range("1.2.0", "1.2.10") %}
 
