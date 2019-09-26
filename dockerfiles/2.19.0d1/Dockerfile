@@ -5,7 +5,7 @@ FROM buildpack-deps AS builder
 # Create a shallow clone of the implementation repository in the work directory,
 # containing only the code of the specified version/tag.
 WORKDIR /mbedtls
-RUN git clone --branch mbedtls-2.19.0d1 --depth 1 --recurse-submodules --shallow-submodules https://github.com/ARMmbed/mbedtls.git .
+RUN git clone --branch mbedtls-2.19.0d1 --depth 1 --recurse-submodules https://github.com/ARMmbed/mbedtls.git .
 
 # Install build depencency cmake
 RUN apt-get update && apt-get install -y cmake
