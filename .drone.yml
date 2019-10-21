@@ -46,18 +46,6 @@ steps:
         --test | tee result.log
       - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
 
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
   - name: publish
     image: docker
     commands:
@@ -128,18 +116,6 @@ steps:
       - connector
         --targetHost sut
         --protocolVersion TLS11
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
         --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
         --merge-application
         --test | tee result.log
@@ -220,18 +196,6 @@ steps:
         --test | tee result.log
       - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
 
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
   - name: publish
     image: docker
     commands:
@@ -302,18 +266,6 @@ steps:
       - connector
         --targetHost sut
         --protocolVersion TLS11
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
         --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
         --merge-application
         --test | tee result.log
@@ -394,18 +346,6 @@ steps:
         --test | tee result.log
       - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
 
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
   - name: publish
     image: docker
     commands:
@@ -476,18 +416,6 @@ steps:
       - connector
         --targetHost sut
         --protocolVersion TLS11
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
         --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
         --merge-application
         --test | tee result.log
@@ -568,18 +496,6 @@ steps:
         --test | tee result.log
       - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
 
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
   - name: publish
     image: docker
     commands:
@@ -650,18 +566,6 @@ steps:
       - connector
         --targetHost sut
         --protocolVersion TLS11
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
         --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
         --merge-application
         --test | tee result.log
@@ -742,18 +646,6 @@ steps:
         --test | tee result.log
       - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
 
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
   - name: publish
     image: docker
     commands:
@@ -824,18 +716,6 @@ steps:
       - connector
         --targetHost sut
         --protocolVersion TLS11
-        --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
-        --merge-application
-        --test | tee result.log
-      - "grep -e 'ApplicationData: APPLICATION|ConnectionClosed' -e 'ApplicationData: APPLICATION|ALERT_WARNING_CLOSE_NOTIFY|ConnectionClosed' result.log"
-
-  - name: verify TLS12
-    image: tlsprint/tlsattackerconnector
-    commands:
-      - sleep 5
-      - connector
-        --targetHost sut
-        --protocolVersion TLS12
         --cipherSuite "TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA"
         --merge-application
         --test | tee result.log

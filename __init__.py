@@ -1,5 +1,10 @@
+from distutils.version import LooseVersion
+
 def get_supported_tls(version):
-    return ["TLS10", "TLS11", "TLS12"]
+    if LooseVersion(version) >= LooseVersion("1.2"):
+        return ["TLS10", "TLS11", "TLS12"]
+    else:
+        return ["TLS10", "TLS11"]
 
 
 def extract_versions(tags):
